@@ -143,8 +143,8 @@ nav a.active {
   grid-template-columns: 1fr 1.05fr;
   align-items: center;
   gap: 35px;
-  padding-top: 65px;
-  padding-bottom: 70px;
+  padding-top: 25px;
+  padding-bottom: 90px;
 }
 
 .hero-copy {
@@ -258,7 +258,7 @@ nav a.active {
   color: white;
 }
 
-/* HERO IMAGE - SOFT BLENDING */
+/* HERO IMAGE - RIGHT POSITION & SOFT BLENDING */
 
 .hero-visual {
   position: relative;
@@ -266,24 +266,23 @@ nav a.active {
   min-height: 430px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   background: transparent;
+  margin-right: -35px;
 }
 
 .hero-image {
   display: block;
-  width: 100%;
-  max-width: 590px;
-  height: 420px;
+  width: 110%;
+  max-width: 650px;
+  height: 450px;
   object-fit: contain;
-  object-position: center;
+  object-position: right center;
   position: relative;
   z-index: 2;
 
-  /* Blend the light photo background into the cream hero */
   mix-blend-mode: multiply;
 
-  /* Soften the outer edges of the photograph */
   -webkit-mask-image: radial-gradient(
     ellipse 78% 76% at center,
     #000 58%,
@@ -462,8 +461,14 @@ footer span { color: var(--gold); }
     gap: 15px;
   }
 
-  .hero-visual { min-height: 350px; }
-  .hero-image { height: 350px; }
+  .hero-visual {
+    min-height: 350px;
+    margin-right: -20px;
+  }
+
+  .hero-image {
+    height: 350px;
+  }
 }
 
 /* MOBILE */
@@ -499,7 +504,7 @@ footer span { color: var(--gold); }
   .hero-layout {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding-top: 55px;
+    padding-top: 35px;
     padding-bottom: 45px;
   }
 
@@ -534,11 +539,15 @@ footer span { color: var(--gold); }
   .hero-visual {
     min-height: 290px;
     margin-top: 5px;
+    margin-right: 0;
+    justify-content: center;
   }
 
   .hero-image {
+    width: 100%;
     height: 290px;
     max-width: 100%;
+    object-position: center;
   }
 
   section:not(.hero) { padding: 65px 0; }
