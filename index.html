@@ -21,7 +21,6 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -38,7 +37,6 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* HEADER */
-
 header {
   background: var(--navy);
   color: var(--white);
@@ -128,7 +126,6 @@ nav a.active {
 }
 
 /* HERO */
-
 .hero {
   background: var(--cream);
   min-height: 620px;
@@ -243,9 +240,7 @@ nav a.active {
   border: 1px solid var(--navy);
 }
 
-.btn-primary:hover {
-  background: var(--navy2);
-}
+.btn-primary:hover { background: var(--navy2); }
 
 .btn-outline {
   color: var(--navy);
@@ -259,7 +254,6 @@ nav a.active {
 }
 
 /* HERO IMAGE - SOFT BLENDING */
-
 .hero-visual {
   position: relative;
   min-width: 0;
@@ -279,11 +273,8 @@ nav a.active {
   object-position: center;
   position: relative;
   z-index: 2;
-
-  /* Blend the light photo background into the cream hero */
   mix-blend-mode: multiply;
 
-  /* Soften the outer edges of the photograph */
   -webkit-mask-image: radial-gradient(
     ellipse 78% 76% at center,
     #000 58%,
@@ -302,7 +293,6 @@ nav a.active {
 }
 
 /* GENERAL SECTIONS */
-
 section:not(.hero) {
   padding: 85px 0;
   scroll-margin-top: 90px;
@@ -439,7 +429,6 @@ footer {
 footer span { color: var(--gold); }
 
 /* TABLET */
-
 @media (max-width: 900px) {
   .header-inner {
     min-height: 78px;
@@ -467,7 +456,6 @@ footer span { color: var(--gold); }
 }
 
 /* MOBILE */
-
 @media (max-width: 620px) {
   .container { width: 89%; }
 
@@ -483,18 +471,13 @@ footer span { color: var(--gold); }
 
   .brand-name { font-size: 19px; }
 
-  nav {
-    gap: 20px;
-  }
-
+  nav { gap: 20px; }
   nav a { font-size: 11px; }
 
   .nav-divider,
   .theme-icons { display: none; }
 
-  .hero {
-    min-height: auto;
-  }
+  .hero { min-height: auto; }
 
   .hero-layout {
     grid-template-columns: 1fr;
@@ -517,7 +500,6 @@ footer span { color: var(--gold); }
   }
 
   .degree { font-size: 17px; }
-
   .specialty { font-size: 12px; }
 
   .hero-description {
@@ -554,9 +536,7 @@ footer span { color: var(--gold); }
 
   .teaching-panel { padding: 30px 25px; }
 
-  .contact-inner {
-    align-items: flex-start;
-  }
+  .contact-inner { align-items: flex-start; }
 }
 </style>
 </head>
@@ -737,4 +717,5 @@ footer span { color: var(--gold); }
 </footer>
 
 </body>
-</html>
+  </html>
+  
