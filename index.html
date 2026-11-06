@@ -4,7 +4,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Nada Galal | Portfolio</title>
+<meta name="description" content="Nada Galal — Computer Science Graduate, Web Developer, WordPress and WooCommerce Specialist, and Creative Coding Educator.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
@@ -18,22 +21,37 @@
   --gold: #b99a61;
   --muted: #737d89;
   --line: #e7dfd1;
+  --blue-soft: #edf2f6;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: var(--cream);
   color: var(--navy);
   font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
 }
 
-a { text-decoration: none; color: inherit; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
 
 .container {
-  width: min(1200px, 90%);
+  width: min(1160px, 90%);
   margin: auto;
 }
 
@@ -49,7 +67,7 @@ header {
 }
 
 .header-inner {
-  min-height: 86px;
+  min-height: 78px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,42 +77,36 @@ header {
 .brand {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 13px;
   flex-shrink: 0;
 }
 
 .logo {
-  width: 43px;
-  height: 43px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: var(--gold);
   font-family: "Playfair Display", serif;
   font-size: 29px;
   font-weight: 600;
-  letter-spacing: -12px;
-  padding-right: 10px;
+  letter-spacing: -3px;
 }
 
 .brand-divider {
   width: 1px;
-  height: 34px;
+  height: 32px;
   background: var(--gold);
-  opacity: .8;
+  opacity: .7;
 }
 
 .brand-name {
   color: var(--white);
   font-family: "Playfair Display", serif;
-  font-size: 21px;
+  font-size: 20px;
   white-space: nowrap;
 }
 
 nav {
   display: flex;
   align-items: center;
-  gap: 23px;
+  gap: 25px;
 }
 
 nav a {
@@ -103,39 +115,32 @@ nav a {
   font-weight: 500;
   padding: 9px 0;
   white-space: nowrap;
-  transition: .2s;
+  transition: color .25s;
 }
 
-nav a:hover { color: var(--gold); }
-
+nav a:hover,
 nav a.active {
   color: var(--gold);
+}
+
+nav a.active {
   border-bottom: 2px solid var(--gold);
 }
 
 .nav-divider {
-  height: 25px;
+  height: 24px;
   width: 1px;
-  background: rgba(185,154,97,.65);
-}
-
-.theme-icons {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--gold);
-  font-size: 17px;
+  background: rgba(185,154,97,.55);
 }
 
 /* HERO */
 
 .hero {
   background: var(--cream);
-  min-height: 620px;
+  min-height: 570px;
   display: flex;
   align-items: center;
   overflow: hidden;
-  position: relative;
 }
 
 .hero-layout {
@@ -143,29 +148,29 @@ nav a.active {
   grid-template-columns: 1fr 1.05fr;
   align-items: center;
   gap: 35px;
-  padding-top: 25px;
-  padding-bottom: 90px;
+  padding-top: 45px;
+  padding-bottom: 55px;
 }
 
 .hero-copy {
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
 .hero-eyebrow {
   display: flex;
   align-items: center;
-  gap: 13px;
+  gap: 12px;
   color: var(--gold);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 2.8px;
-  margin-bottom: 25px;
+  letter-spacing: 2.5px;
+  margin-bottom: 23px;
 }
 
 .hero-eyebrow::before {
   content: "";
-  width: 37px;
+  width: 35px;
   height: 1px;
   background: var(--gold);
 }
@@ -173,66 +178,69 @@ nav a.active {
 .hero h1 {
   font-family: "Playfair Display", serif;
   font-weight: 600;
-  line-height: 1.12;
-  margin-bottom: 20px;
+  line-height: 1.1;
+  margin-bottom: 17px;
 }
 
 .greeting {
   display: block;
-  font-size: clamp(42px, 5vw, 62px);
+  font-size: clamp(42px, 5vw, 59px);
   font-style: italic;
-  color: var(--navy);
   font-weight: 500;
 }
 
 .hero-name {
   display: block;
-  font-size: clamp(52px, 6vw, 76px);
+  font-size: clamp(52px, 6vw, 75px);
   letter-spacing: -2px;
   white-space: nowrap;
 }
 
-.hero-name .nada { color: var(--navy); }
-.hero-name .galal { color: var(--gold); }
+.nada {
+  color: var(--navy);
+}
+
+.galal {
+  color: var(--gold);
+}
 
 .degree {
-  color: var(--navy);
   font-family: "Playfair Display", serif;
-  font-size: 19px;
-  margin-bottom: 12px;
+  font-size: 18px;
+  margin-bottom: 9px;
 }
 
 .specialty {
   color: var(--navy2);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.8;
-  margin-bottom: 17px;
+  margin-bottom: 15px;
 }
 
 .hero-description {
   color: var(--muted);
-  max-width: 450px;
-  font-size: 14px;
+  max-width: 430px;
+  font-size: 13px;
   line-height: 1.9;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .hero-buttons {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 13px;
+  gap: 12px;
 }
 
 .btn {
-  min-height: 49px;
+  min-height: 45px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 23px;
+  padding: 0 21px;
   border-radius: 7px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   transition: .25s;
 }
@@ -245,11 +253,12 @@ nav a.active {
 
 .btn-primary:hover {
   background: var(--navy2);
+  transform: translateY(-2px);
 }
 
 .btn-outline {
   color: var(--navy);
-  border: 1px solid rgba(20,43,70,.35);
+  border: 1px solid rgba(20,43,70,.3);
   background: transparent;
 }
 
@@ -258,160 +267,504 @@ nav a.active {
   color: white;
 }
 
-/* HERO IMAGE - RIGHT POSITION & SOFT BLENDING */
-
 .hero-visual {
-  position: relative;
   min-width: 0;
-  min-height: 430px;
+  min-height: 390px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background: transparent;
-  margin-right: -35px;
+  margin-right: -25px;
 }
 
 .hero-image {
   display: block;
   width: 110%;
-  max-width: 650px;
-  height: 450px;
+  max-width: 630px;
+  height: 420px;
   object-fit: contain;
   object-position: right center;
-  position: relative;
-  z-index: 2;
-
   mix-blend-mode: multiply;
-
   -webkit-mask-image: radial-gradient(
-    ellipse 78% 76% at center,
+    ellipse 80% 78% at center,
     #000 58%,
-    rgba(0,0,0,.95) 70%,
-    rgba(0,0,0,.55) 83%,
+    rgba(0,0,0,.95) 72%,
     transparent 100%
   );
-
   mask-image: radial-gradient(
-    ellipse 78% 76% at center,
+    ellipse 80% 78% at center,
     #000 58%,
-    rgba(0,0,0,.95) 70%,
-    rgba(0,0,0,.55) 83%,
+    rgba(0,0,0,.95) 72%,
     transparent 100%
   );
 }
 
-/* GENERAL SECTIONS */
+/* SPECIALTIES STRIP */
+
+.specialties {
+  background: var(--white);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 23px 0;
+}
+
+.specialties-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.specialty-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--navy2);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.specialty-icon {
+  font-size: 19px;
+  color: var(--gold);
+}
+
+/* SHARED SECTION STYLES */
 
 section:not(.hero) {
-  padding: 85px 0;
   scroll-margin-top: 90px;
 }
 
 .section-label {
   color: var(--gold);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 3px;
-  margin-bottom: 13px;
+  letter-spacing: 2.8px;
+  margin-bottom: 10px;
 }
 
 .section-title {
   color: var(--navy);
   font-family: "Playfair Display", serif;
-  font-size: clamp(32px, 4vw, 45px);
+  font-size: clamp(29px, 3.5vw, 39px);
   font-weight: 600;
-  margin-bottom: 18px;
+  line-height: 1.25;
+  margin-bottom: 12px;
 }
 
 .section-intro {
   color: var(--muted);
-  max-width: 650px;
-  line-height: 1.9;
-  font-size: 14px;
-  margin-bottom: 35px;
+  max-width: 620px;
+  font-size: 13px;
+  line-height: 1.8;
 }
 
-.about { background: var(--white); }
+/* FEATURED PROJECTS */
 
-.about-text {
-  max-width: 850px;
-  color: var(--muted);
-  line-height: 2;
-  font-size: 15px;
+.projects {
+  background: var(--white);
+  padding: 75px 0 85px;
 }
 
-.skills-grid,
+.projects-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.projects-heading .section-intro {
+  margin-top: 5px;
+}
+
+.view-all {
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 5px;
+  white-space: nowrap;
+  transition: .2s;
+}
+
+.view-all:hover {
+  color: var(--gold);
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 20px;
 }
 
-.skill-card,
 .project-card {
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 30px;
-  transition: .25s;
+  border-radius: 9px;
+  overflow: hidden;
+  transition: .3s ease;
 }
 
-.skill-card:hover,
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(20,43,70,.07);
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(20,43,70,.09);
 }
 
-.card-number {
+.project-visual {
+  height: 190px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-store {
+  background: linear-gradient(135deg, #e8eee7, #f5eee1);
+}
+
+.store-window {
+  width: 76%;
+  height: 78%;
+  background: #fffefa;
+  border-radius: 7px;
+  box-shadow: 0 10px 24px rgba(20,43,70,.12);
+  padding: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.store-top {
+  height: 10px;
+  width: 45%;
+  border-radius: 10px;
+  background: var(--navy);
+}
+
+.store-photo {
+  flex: 1;
+  border-radius: 5px;
+  background:
+    radial-gradient(circle at 25% 45%, #d9a85c 0 12%, transparent 13%),
+    radial-gradient(circle at 53% 35%, #799b70 0 17%, transparent 18%),
+    radial-gradient(circle at 75% 60%, #bd7652 0 14%, transparent 15%),
+    linear-gradient(135deg, #dce6d4, #f0d9b8);
+}
+
+.store-lines {
+  height: 7px;
+  width: 65%;
+  background: #e6e1d7;
+  border-radius: 5px;
+}
+
+.visual-business {
+  background: linear-gradient(135deg, #e8edf2, #d7e1eb);
+}
+
+.business-window {
+  width: 78%;
+  height: 78%;
+  background: white;
+  border-radius: 7px;
+  box-shadow: 0 10px 24px rgba(20,43,70,.12);
+  padding: 13px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.business-side {
+  width: 43%;
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #203d5c, #45698a);
+}
+
+.business-content {
+  flex: 1;
+}
+
+.business-line {
+  height: 7px;
+  border-radius: 5px;
+  background: #d9e0e6;
+  margin: 9px 0;
+}
+
+.business-line.short {
+  width: 60%;
+  background: var(--gold);
+}
+
+.business-button {
+  width: 55%;
+  height: 18px;
+  background: var(--navy);
+  border-radius: 4px;
+  margin-top: 13px;
+}
+
+.visual-scratch {
+  background: linear-gradient(135deg, #fff2d8, #f7e3b9);
+}
+
+.scratch-stage {
+  width: 78%;
+  height: 78%;
+  background: #fffefa;
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(20,43,70,.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.scratch-sky {
+  position: absolute;
+  inset: 0 0 35%;
+  background: linear-gradient(#a8d7f1, #d8eff5);
+}
+
+.scratch-ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 37%;
+  background: #76b76c;
+}
+
+.scratch-sun {
+  position: absolute;
+  top: 13px;
+  right: 18px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #f5c65b;
+}
+
+.scratch-cat {
+  position: absolute;
+  width: 38px;
+  height: 34px;
+  left: 43%;
+  bottom: 27%;
+  background: #f5a52e;
+  border: 2px solid #26364a;
+  border-radius: 45% 45% 38% 38%;
+  transform: rotate(-8deg);
+}
+
+.scratch-cat::before,
+.scratch-cat::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 12px;
+  height: 14px;
+  background: #f5a52e;
+  border: 2px solid #26364a;
+  border-bottom: 0;
+}
+
+.scratch-cat::before {
+  left: 1px;
+  transform: rotate(-20deg);
+}
+
+.scratch-cat::after {
+  right: 1px;
+  transform: rotate(20deg);
+}
+
+.project-content {
+  padding: 20px 20px 22px;
+}
+
+.project-category {
   color: var(--gold);
-  font-family: "Playfair Display", serif;
-  font-size: 25px;
-  margin-bottom: 17px;
-}
-
-.skill-card h3,
-.project-card h3 {
-  color: var(--navy);
-  font-family: "Playfair Display", serif;
-  font-size: 21px;
-  margin-bottom: 12px;
-}
-
-.skill-card p,
-.project-card p {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.9;
-}
-
-.projects { background: var(--white); }
-
-.project-tag {
-  display: block;
-  color: var(--gold);
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 1.5px;
+  margin-bottom: 9px;
+}
+
+.project-content h3 {
+  color: var(--navy);
+  font-family: "Playfair Display", serif;
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.project-content p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+  min-height: 62px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 14px;
+}
+
+.project-link:hover {
+  color: var(--gold);
+}
+
+/* SKILLS + ABOUT */
+
+.profile-section {
+  background: var(--blue-soft);
+  padding: 75px 0;
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: start;
+}
+
+.skills-side {
+  padding-right: 35px;
+  border-right: 1px solid rgba(185,154,97,.65);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px 13px;
+  margin-top: 27px;
+}
+
+.skill-item {
+  text-align: center;
+  min-width: 0;
+}
+
+.skill-symbol {
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.skill-item span {
+  display: block;
+  color: var(--navy2);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.skill-wordpress { color: #27749a; }
+.skill-woo { color: #8955a5; }
+.skill-html { color: #e46b3d; }
+.skill-css { color: #3676c5; }
+.skill-js { color: #c49a27; }
+.skill-scratch { color: #e9a52c; }
+
+.about-side .section-title {
   margin-bottom: 14px;
 }
 
-.teaching-panel {
-  background: var(--navy);
-  color: white;
-  border-radius: 10px;
-  padding: 48px;
+.about-text {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+  margin-bottom: 15px;
 }
 
-.teaching-panel .section-title { color: white; }
+.about-list {
+  list-style: none;
+  margin-bottom: 21px;
+}
+
+.about-list li {
+  color: var(--navy2);
+  font-size: 11px;
+  line-height: 2;
+}
+
+.about-list li::before {
+  content: "✓";
+  color: var(--gold);
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.small-btn {
+  min-height: 38px;
+  padding: 0 17px;
+  font-size: 10px;
+}
+
+/* TEACHING */
+
+.teaching {
+  background: var(--white);
+  padding: 65px 0;
+}
+
+.teaching-panel {
+  min-height: 190px;
+  border-radius: 10px;
+  padding: 38px 45px;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(185,154,97,.15), transparent 32%),
+    linear-gradient(110deg, #f1eee7, #e8edf3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  overflow: hidden;
+}
+
+.teaching-copy {
+  max-width: 650px;
+}
+
+.teaching-panel .section-title {
+  font-size: 30px;
+}
 
 .teaching-panel p {
-  color: rgba(255,255,255,.78);
-  max-width: 700px;
+  color: var(--muted);
+  font-size: 12px;
   line-height: 1.9;
-  font-size: 14px;
+  max-width: 600px;
 }
 
-.contact { background: var(--white); }
+.teaching-mark {
+  flex-shrink: 0;
+  width: 130px;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 75px;
+  opacity: .8;
+}
+
+/* CONTACT */
+
+.contact {
+  background: var(--cream);
+  padding: 65px 0;
+}
 
 .contact-inner {
   display: flex;
@@ -424,37 +777,63 @@ section:not(.hero) {
 .contact-inner p {
   color: var(--muted);
   max-width: 570px;
+  font-size: 13px;
   line-height: 1.9;
 }
 
+/* FOOTER */
+
 footer {
   background: var(--navy);
-  color: rgba(255,255,255,.7);
-  text-align: center;
-  padding: 25px 15px;
-  font-size: 12px;
+  color: rgba(255,255,255,.75);
+  padding: 27px 0;
+  font-size: 11px;
 }
 
-footer span { color: var(--gold); }
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  color: var(--white);
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+}
+
+.footer-brand span {
+  color: var(--gold);
+}
+
+.footer-note {
+  color: rgba(255,255,255,.65);
+}
+
+.footer-note span {
+  color: var(--gold);
+}
 
 /* TABLET */
 
 @media (max-width: 900px) {
   .header-inner {
-    min-height: 78px;
-    flex-wrap: wrap;
-    padding: 12px 0;
+    min-height: 72px;
   }
 
   nav {
-    width: 100%;
-    overflow-x: auto;
-    gap: 22px;
-    scrollbar-width: none;
-    padding-bottom: 5px;
+    gap: 16px;
   }
 
-  nav::-webkit-scrollbar { display: none; }
+  nav a {
+    font-size: 11px;
+  }
+
+  .hero {
+    min-height: 500px;
+  }
 
   .hero-layout {
     grid-template-columns: 1fr 1fr;
@@ -462,40 +841,71 @@ footer span { color: var(--gold); }
   }
 
   .hero-visual {
-    min-height: 350px;
-    margin-right: -20px;
+    min-height: 330px;
+    margin-right: -15px;
   }
 
   .hero-image {
-    height: 350px;
+    height: 340px;
+  }
+
+  .projects-grid {
+    gap: 14px;
+  }
+
+  .project-content {
+    padding: 17px;
+  }
+
+  .profile-layout {
+    gap: 35px;
+  }
+
+  .skills-side {
+    padding-right: 22px;
   }
 }
 
 /* MOBILE */
 
 @media (max-width: 620px) {
-  .container { width: 89%; }
+  .container {
+    width: 89%;
+  }
 
   .header-inner {
-    gap: 10px;
-    padding: 13px 0 9px;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 0 8px;
   }
 
   .logo {
-    width: 37px;
     font-size: 26px;
   }
 
-  .brand-name { font-size: 19px; }
-
-  nav {
-    gap: 20px;
+  .brand-name {
+    font-size: 18px;
   }
 
-  nav a { font-size: 11px; }
+  nav {
+    width: 100%;
+    overflow-x: auto;
+    gap: 21px;
+    scrollbar-width: none;
+    padding-bottom: 5px;
+  }
 
-  .nav-divider,
-  .theme-icons { display: none; }
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav a {
+    font-size: 10px;
+  }
+
+  .nav-divider {
+    display: none;
+  }
 
   .hero {
     min-height: auto;
@@ -503,68 +913,191 @@ footer span { color: var(--gold); }
 
   .hero-layout {
     grid-template-columns: 1fr;
-    gap: 20px;
-    padding-top: 35px;
-    padding-bottom: 45px;
+    gap: 8px;
+    padding-top: 38px;
+    padding-bottom: 25px;
   }
 
   .hero-eyebrow {
     font-size: 9px;
-    letter-spacing: 2px;
-    margin-bottom: 19px;
+    letter-spacing: 1.8px;
+    margin-bottom: 17px;
   }
 
-  .greeting { font-size: 48px; }
+  .greeting {
+    font-size: 45px;
+  }
 
   .hero-name {
-    font-size: clamp(49px, 13vw, 66px);
-    letter-spacing: -1.8px;
+    font-size: clamp(48px, 13vw, 64px);
+    letter-spacing: -1.5px;
   }
 
-  .degree { font-size: 17px; }
-
-  .specialty { font-size: 12px; }
-
-  .hero-description {
-    font-size: 13px;
-    margin-bottom: 22px;
+  .degree {
+    font-size: 16px;
   }
 
-  .btn {
-    min-height: 46px;
-    padding: 0 17px;
+  .specialty {
     font-size: 11px;
   }
 
+  .hero-description {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    min-height: 43px;
+    padding: 0 16px;
+    font-size: 10px;
+  }
+
   .hero-visual {
-    min-height: 290px;
-    margin-top: 5px;
-    margin-right: 0;
+    min-height: 250px;
+    margin: 0;
     justify-content: center;
   }
 
   .hero-image {
     width: 100%;
-    height: 290px;
+    height: 265px;
     max-width: 100%;
     object-position: center;
   }
 
-  section:not(.hero) { padding: 65px 0; }
-
-  .skills-grid,
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
+  .specialties {
+    padding: 19px 0;
   }
 
-  .skill-card,
-  .project-card { padding: 25px; }
+  .specialties-inner {
+    gap: 15px 22px;
+    justify-content: center;
+  }
 
-  .teaching-panel { padding: 30px 25px; }
+  .specialty-item {
+    font-size: 10px;
+    gap: 6px;
+  }
+
+  .specialty-icon {
+    font-size: 16px;
+  }
+
+  .projects {
+    padding: 58px 0 65px;
+  }
+
+  .projects-heading {
+    align-items: flex-start;
+    margin-bottom: 25px;
+  }
+
+  .projects-heading .section-title {
+    font-size: 30px;
+  }
+
+  .projects-heading .section-intro {
+    font-size: 11px;
+    max-width: 250px;
+  }
+
+  .view-all {
+    font-size: 10px;
+    margin-top: 25px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .project-visual {
+    height: 190px;
+  }
+
+  .project-content {
+    padding: 19px;
+  }
+
+  .project-content p {
+    min-height: 0;
+  }
+
+  .profile-section {
+    padding: 58px 0;
+  }
+
+  .profile-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .skills-side {
+    padding-right: 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(185,154,97,.55);
+    padding-bottom: 35px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 9px;
+  }
+
+  .skill-symbol {
+    height: 40px;
+    font-size: 25px;
+  }
+
+  .skill-item span {
+    font-size: 9px;
+  }
+
+  .about-text {
+    font-size: 12px;
+  }
+
+  .about-list li {
+    font-size: 10px;
+  }
+
+  .teaching {
+    padding: 48px 0;
+  }
+
+  .teaching-panel {
+    padding: 29px 23px;
+    min-height: auto;
+  }
+
+  .teaching-panel .section-title {
+    font-size: 25px;
+  }
+
+  .teaching-panel p {
+    font-size: 11px;
+  }
+
+  .teaching-mark {
+    display: none;
+  }
+
+  .contact {
+    padding: 55px 0;
+  }
 
   .contact-inner {
     align-items: flex-start;
+  }
+
+  .contact-inner p {
+    font-size: 12px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 9px;
   }
 }
 </style>
@@ -583,13 +1116,11 @@ footer span { color: var(--gold); }
 
     <nav>
       <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
       <a href="#teaching">Teaching</a>
       <a href="#contact">Contact</a>
-      <span class="nav-divider"></span>
-      <span class="theme-icons">☼　☾</span>
     </nav>
 
   </div>
@@ -597,10 +1128,13 @@ footer span { color: var(--gold); }
 
 <main>
 
+<!-- HERO -->
+
 <section class="hero" id="home">
   <div class="container hero-layout">
 
     <div class="hero-copy">
+
       <div class="hero-eyebrow">
         WEB DEVELOPMENT · TECHNOLOGY EDUCATION
       </div>
@@ -616,7 +1150,7 @@ footer span { color: var(--gold); }
       <div class="degree">Computer Science Graduate</div>
 
       <div class="specialty">
-        Web Developer&nbsp; | &nbsp;WordPress & WooCommerce Specialist
+        Web Developer | WordPress & WooCommerce Specialist
       </div>
 
       <p class="hero-description">
@@ -624,109 +1158,283 @@ footer span { color: var(--gold); }
       </p>
 
       <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">View My Projects &nbsp; →</a>
-        <a href="#contact" class="btn btn-outline">✉ &nbsp; Contact Me</a>
+        <a href="#projects" class="btn btn-primary">
+          View My Projects &nbsp; →
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+          ✉ &nbsp; Contact Me
+        </a>
       </div>
+
     </div>
 
     <div class="hero-visual">
       <img
         class="hero-image"
         src="hero-laptop-new1.png"
-        alt="Laptop displaying colorful programming code"
+        alt="Laptop displaying programming code"
       >
     </div>
 
   </div>
 </section>
 
-<section class="about" id="about">
-  <div class="container">
-    <div class="section-label">ABOUT ME</div>
-    <h2 class="section-title">A Passionate Developer<br>and Lifelong Learner</h2>
-    <p class="about-text">
-      I'm Nada Galal, a Computer Science graduate with a passion for web development
-      and education. I specialize in building responsive websites, WordPress &
-      WooCommerce stores, and creating engaging learning projects, especially with Scratch.
-    </p>
-  </div>
-</section>
+<!-- SPECIALTIES -->
 
-<section id="skills">
-  <div class="container">
-    <div class="section-label">WHAT I DO</div>
-    <h2 class="section-title">My Skills</h2>
-    <p class="section-intro">A blend of technical skills and creative tools.</p>
+<div class="specialties">
+  <div class="container specialties-inner">
 
-    <div class="skills-grid">
-      <article class="skill-card">
-        <div class="card-number">01</div>
-        <h3>Web Development</h3>
-        <p>Building responsive and user-friendly websites with attention to detail and usability.</p>
-      </article>
-
-      <article class="skill-card">
-        <div class="card-number">02</div>
-        <h3>WordPress & WooCommerce</h3>
-        <p>Creating and managing websites and online stores using WordPress and WooCommerce.</p>
-      </article>
-
-      <article class="skill-card">
-        <div class="card-number">03</div>
-        <h3>Technology Education</h3>
-        <p>Introducing programming concepts through interactive learning and creative activities.</p>
-      </article>
+    <div class="specialty-item">
+      <span class="specialty-icon">◉</span>
+      WordPress
     </div>
+
+    <div class="specialty-item">
+      <span class="specialty-icon">▣</span>
+      WooCommerce
+    </div>
+
+    <div class="specialty-item">
+      <span class="specialty-icon">🟠</span>
+      Scratch
+    </div>
+
+    <div class="specialty-item">
+      <span class="specialty-icon">&lt;/&gt;</span>
+      HTML / CSS / JS
+    </div>
+
   </div>
-</section>
+</div>
+
+<!-- FEATURED PROJECTS -->
 
 <section class="projects" id="projects">
   <div class="container">
-    <div class="section-label">MY PROJECTS</div>
-    <h2 class="section-title">Explore My Work</h2>
-    <p class="section-intro">A selection of my work.</p>
+
+    <div class="projects-heading">
+      <div>
+        <div class="section-label">MY WORK</div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-intro">
+          A selection of my recent web and coding projects. Each project reflects
+          my passion for creating useful and engaging digital experiences.
+        </p>
+      </div>
+
+      <a href="#contact" class="view-all">View All Projects &nbsp; →</a>
+    </div>
 
     <div class="projects-grid">
-      <article class="project-card">
-        <span class="project-tag">SCRATCH · EDUCATION</span>
-        <h3>Interactive Motherboard Game</h3>
-        <p>An educational Scratch project introducing computer hardware concepts in an interactive way.</p>
-      </article>
+
+      <!-- PROJECT 1 -->
 
       <article class="project-card">
-        <span class="project-tag">WORDPRESS · WEBSITE</span>
-        <h3>El Shennawy</h3>
-        <p>A WordPress website for a plumbing supplies business, presenting products and business information online.</p>
+
+        <div class="project-visual visual-store">
+          <div class="store-window">
+            <div class="store-top"></div>
+            <div class="store-photo"></div>
+            <div class="store-lines"></div>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <div class="project-category">WORDPRESS · WOOCOMMERCE</div>
+          <h3>Online Store Website</h3>
+          <p>
+            A responsive e-commerce website built with WordPress and WooCommerce,
+            with a clean design and smooth shopping experience.
+          </p>
+          <a href="#" class="project-link">
+            View Project &nbsp; →
+          </a>
+        </div>
+
       </article>
 
+      <!-- PROJECT 2 -->
+
       <article class="project-card">
-        <span class="project-tag">WEB DEVELOPMENT</span>
-        <h3>More Projects Coming Soon</h3>
-        <p>More creative and technical work will be added as my portfolio grows.</p>
+
+        <div class="project-visual visual-business">
+          <div class="business-window">
+            <div class="business-side"></div>
+            <div class="business-content">
+              <div class="business-line short"></div>
+              <div class="business-line"></div>
+              <div class="business-line"></div>
+              <div class="business-button"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <div class="project-category">WORDPRESS · BUSINESS WEBSITE</div>
+          <h3>El Shennawy Website</h3>
+          <p>
+            A business website for a plumbing supplies company, presenting
+            services and business information in a clear layout.
+          </p>
+          <a href="#" class="project-link">
+            View Project &nbsp; →
+          </a>
+        </div>
+
       </article>
+
+      <!-- PROJECT 3 -->
+
+      <article class="project-card">
+
+        <div class="project-visual visual-scratch">
+          <div class="scratch-stage">
+            <div class="scratch-sky"></div>
+            <div class="scratch-sun"></div>
+            <div class="scratch-ground"></div>
+            <div class="scratch-cat"></div>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <div class="project-category">SCRATCH · EDUCATION</div>
+          <h3>Interactive Learning Game</h3>
+          <p>
+            An educational Scratch project introducing computer concepts
+            through interactive activities and playful learning.
+          </p>
+          <a href="#" class="project-link">
+            View Project &nbsp; →
+          </a>
+        </div>
+
+      </article>
+
     </div>
   </div>
 </section>
 
-<section id="teaching">
-  <div class="container">
-    <div class="teaching-panel">
-      <div class="section-label">SHARING KNOWLEDGE</div>
-      <h2 class="section-title">Teaching & Educational Projects</h2>
-      <p>
-        I believe technology becomes more exciting when people learn by creating.
-        Through programming activities and Scratch projects, I aim to make
-        technical ideas easier to understand and explore.
+<!-- SKILLS + ABOUT -->
+
+<section class="profile-section">
+
+  <div class="container profile-layout">
+
+    <div class="skills-side" id="skills">
+
+      <div class="section-label">MY SKILLS</div>
+      <h2 class="section-title">Technical Skills</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-item">
+          <div class="skill-symbol skill-wordpress">W</div>
+          <span>WordPress</span>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-symbol skill-woo">W</div>
+          <span>WooCommerce</span>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-symbol skill-html">5</div>
+          <span>HTML</span>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-symbol skill-css">3</div>
+          <span>CSS</span>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-symbol skill-js">JS</div>
+          <span>JavaScript</span>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-symbol skill-scratch">✿</div>
+          <span>Scratch</span>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-symbol">⌘</div>
+          <span>Git & GitHub</span>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-symbol">⚙</div>
+          <span>SEO Basics</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="about-side" id="about">
+
+      <div class="section-label">GET TO KNOW ME</div>
+      <h2 class="section-title">About Me</h2>
+
+      <p class="about-text">
+        I'm Nada Galal, a Computer Science graduate with a passion for web
+        development and creative coding education. I love turning ideas into
+        functional websites and fun learning experiences for kids and beginners.
       </p>
+
+      <ul class="about-list">
+        <li>Computer Science — Faculty of Specific Education</li>
+        <li>TOEFL Certified</li>
+        <li>Typing Speed: 38 WPM</li>
+        <li>Always learning and exploring new technologies</li>
+      </ul>
+
+      <a href="#contact" class="btn btn-outline small-btn">
+        Let's Connect &nbsp; →
+      </a>
+
     </div>
+
   </div>
 </section>
+
+<!-- TEACHING -->
+
+<section class="teaching" id="teaching">
+  <div class="container">
+
+    <div class="teaching-panel">
+
+      <div class="teaching-copy">
+        <div class="section-label">SHARING KNOWLEDGE</div>
+
+        <h2 class="section-title">
+          Teaching & Educational Projects
+        </h2>
+
+        <p>
+          Exploring the world of programming through Scratch and fun learning
+          activities. I believe technology becomes more exciting when people
+          learn by creating.
+        </p>
+      </div>
+
+      <div class="teaching-mark">✧</div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
   <div class="container contact-inner">
+
     <div>
       <div class="section-label">LET'S CONNECT</div>
       <h2 class="section-title">Get in Touch</h2>
+
       <p>
         Have a project, an idea, or an opportunity to discuss?
         I'd be happy to hear from you.
@@ -734,15 +1442,32 @@ footer span { color: var(--gold); }
     </div>
 
     <a href="mailto:YOUR-EMAIL@example.com" class="btn btn-primary">
-      Contact Me →
+      Contact Me &nbsp; →
     </a>
+
   </div>
 </section>
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
-  © 2026 Nada Galal. Made with <span>care</span>.
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <span>NG</span> &nbsp; Nada Galal
+    </div>
+
+    <div class="footer-note">
+      Build · Teach · Inspire
+    </div>
+
+    <div>
+      © 2026 Nada Galal. All rights reserved.
+    </div>
+
+  </div>
 </footer>
 
 </body>
