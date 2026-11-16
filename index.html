@@ -127,12 +127,6 @@ nav a.active {
   border-bottom: 2px solid var(--gold);
 }
 
-.nav-divider {
-  height: 24px;
-  width: 1px;
-  background: rgba(185,154,97,.55);
-}
-
 /* HERO */
 
 .hero {
@@ -413,13 +407,15 @@ section:not(.hero) {
 }
 
 .project-visual {
-  height: 190px;
+  height: 210px;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+/* FIRST PROJECT VISUAL */
 
 .visual-store {
   background: linear-gradient(135deg, #e8eee7, #f5eee1);
@@ -461,124 +457,19 @@ section:not(.hero) {
   border-radius: 5px;
 }
 
-.visual-business {
-  background: linear-gradient(135deg, #e8edf2, #d7e1eb);
-}
+/* PROJECT IMAGES */
 
-.business-window {
-  width: 78%;
-  height: 78%;
-  background: white;
-  border-radius: 7px;
-  box-shadow: 0 10px 24px rgba(20,43,70,.12);
-  padding: 13px;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.business-side {
-  width: 43%;
-  height: 100%;
-  border-radius: 5px;
-  background: linear-gradient(145deg, #203d5c, #45698a);
-}
-
-.business-content {
-  flex: 1;
-}
-
-.business-line {
-  height: 7px;
-  border-radius: 5px;
-  background: #d9e0e6;
-  margin: 9px 0;
-}
-
-.business-line.short {
-  width: 60%;
-  background: var(--gold);
-}
-
-.business-button {
-  width: 55%;
-  height: 18px;
-  background: var(--navy);
-  border-radius: 4px;
-  margin-top: 13px;
-}
-
-.visual-scratch {
-  background: linear-gradient(135deg, #fff2d8, #f7e3b9);
-}
-
-.scratch-stage {
-  width: 78%;
-  height: 78%;
-  background: #fffefa;
-  border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(20,43,70,.1);
-  position: relative;
-  overflow: hidden;
-}
-
-.scratch-sky {
-  position: absolute;
-  inset: 0 0 35%;
-  background: linear-gradient(#a8d7f1, #d8eff5);
-}
-
-.scratch-ground {
-  position: absolute;
-  bottom: 0;
+.project-image {
+  display: block;
   width: 100%;
-  height: 37%;
-  background: #76b76c;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 8px;
+  background: #f3f0e9;
 }
 
-.scratch-sun {
-  position: absolute;
-  top: 13px;
-  right: 18px;
-  width: 23px;
-  height: 23px;
-  border-radius: 50%;
-  background: #f5c65b;
-}
-
-.scratch-cat {
-  position: absolute;
-  width: 38px;
-  height: 34px;
-  left: 43%;
-  bottom: 27%;
-  background: #f5a52e;
-  border: 2px solid #26364a;
-  border-radius: 45% 45% 38% 38%;
-  transform: rotate(-8deg);
-}
-
-.scratch-cat::before,
-.scratch-cat::after {
-  content: "";
-  position: absolute;
-  top: -8px;
-  width: 12px;
-  height: 14px;
-  background: #f5a52e;
-  border: 2px solid #26364a;
-  border-bottom: 0;
-}
-
-.scratch-cat::before {
-  left: 1px;
-  transform: rotate(-20deg);
-}
-
-.scratch-cat::after {
-  right: 1px;
-  transform: rotate(20deg);
-}
+/* PROJECT CONTENT */
 
 .project-content {
   padding: 20px 20px 22px;
@@ -903,10 +794,6 @@ footer {
     font-size: 10px;
   }
 
-  .nav-divider {
-    display: none;
-  }
-
   .hero {
     min-height: auto;
   }
@@ -1012,7 +899,7 @@ footer {
   }
 
   .project-visual {
-    height: 190px;
+    height: 210px;
   }
 
   .project-content {
@@ -1254,20 +1141,16 @@ footer {
 
       </article>
 
-      <!-- PROJECT 2 -->
+      <!-- PROJECT 2: EL SHENNAWY -->
 
       <article class="project-card">
 
-        <div class="project-visual visual-business">
-          <div class="business-window">
-            <div class="business-side"></div>
-            <div class="business-content">
-              <div class="business-line short"></div>
-              <div class="business-line"></div>
-              <div class="business-line"></div>
-              <div class="business-button"></div>
-            </div>
-          </div>
+        <div class="project-visual">
+          <img
+            class="project-image"
+            src="el-shennawy-project.png"
+            alt="El Shennawy plumbing supplies website showcase"
+          >
         </div>
 
         <div class="project-content">
@@ -1284,25 +1167,24 @@ footer {
 
       </article>
 
-      <!-- PROJECT 3 -->
+      <!-- PROJECT 3: SCRATCH GAME -->
 
       <article class="project-card">
 
-        <div class="project-visual visual-scratch">
-          <div class="scratch-stage">
-            <div class="scratch-sky"></div>
-            <div class="scratch-sun"></div>
-            <div class="scratch-ground"></div>
-            <div class="scratch-cat"></div>
-          </div>
+        <div class="project-visual">
+          <img
+            class="project-image"
+            src="motherboard-project.png"
+            alt="Motherboard Explorer interactive Scratch learning game"
+          >
         </div>
 
         <div class="project-content">
           <div class="project-category">SCRATCH · EDUCATION</div>
-          <h3>Interactive Learning Game</h3>
+          <h3>Motherboard Explorer</h3>
           <p>
-            An educational Scratch project introducing computer concepts
-            through interactive activities and playful learning.
+            An interactive Scratch game that introduces motherboard components
+            through two playful levels of exploration and discovery.
           </p>
           <a href="#" class="project-link">
             View Project &nbsp; →
